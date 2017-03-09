@@ -24,6 +24,22 @@ function readNum() {
 function compute(arr) {
 	//get rid of the "=" sign as the last element of the array
 	arr.pop(); 
-	console.log(arr);
 	const len = arr.length;
+
+	let arthm = arr.filter(a => isNaN(a));
+	console.log(arr);
+	console.log(arthm);
+}
+
+function arthm(a, b, operator) {
+	switch(operator) {
+		case "+":
+			return a+b;
+		case "-":
+			return a-b;
+		case "x":
+			return a*b;
+		case "/":
+			return a/b;
+	}
 }
