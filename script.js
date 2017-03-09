@@ -6,15 +6,18 @@ let array = []; //is the array sent to compute() func.
 let nums=[]; //temporary array to determine the numbers
 function readNum() {
 	const value = this.value;
-	if (parseFloat(value)) {
+
+	if (!isNaN(parseFloat(value))) {
 		nums.push(value);
 	} else {
-		let num = parseFloat(nums.join(""));
-		nums = []; //empty nums array to determine the next number clicked.
-		array.push(num);
-		array.push(value);
+		if (value === ".") nums.push(value);
+		else {
+			let num = parseFloat(nums.join(""));
+			nums = []; //empty nums array to determine the next number clicked.
+			array.push(num);
+			array.push(value);
+		}
 	}
-
 	if (value === "=") {
 		compute(array);
 		array = [];
@@ -29,8 +32,11 @@ function compute(arr) {
 
 	let a = arr.slice(0, len-2);
 	let result = arthm(a, arr[len-1], arr[len-2]);
-	console.log(result);
-	if (isNaN(result)) result = "Wrong input";
+	if (isNaN(result)) {
+		result = "Wrong input";
+	} else {
+		console.log(result.toFixed(3));
+	}
 	//console.log(isNaN(a));
 }
 
