@@ -3,39 +3,47 @@
 <head>
 	<meta charset="UTF-8">
 	<title>JS Calculator</title>
-	<link href="style.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 	<div class="skeleton">
-		<div class="btn-group">
-			<button type="button" class="numBtn" value="7">7</button>
-			<button type="button" class="numBtn" value="8">8</button>
-			<button type="button" class="numBtn" value="9">9</button>
+		<h1> JS Calculator </h1>
+		<div class="screen">
+			<p id="formula"></p>
+			<p id="result"></p>
 		</div>
-		<div class="btn-group">
-			<button type="button" class="numBtn" value="4">4</button>
-			<button type="button" class="numBtn" value="5">5</button>
-			<button type="button" class="numBtn" value="6">6</button>
+		<div class="flex-grp">
+			<div class="numbers">
+					<button type="button" class="numBtn" value="7">7</button>
+					<button type="button" class="numBtn" value="8">8</button>
+					<button type="button" class="numBtn" value="9">9</button>
+					<button type="button" class="numBtn" value="4">4</button>
+					<button type="button" class="numBtn" value="5">5</button>
+					<button type="button" class="numBtn" value="6">6</button>
+					<button type="button" class="numBtn" value="1">1</button>
+					<button type="button" class="numBtn" value="2">2</button>
+					<button type="button" class="numBtn" value="3">3</button>
+					<button type="button" class="numBtn" value="0">0</button>
+					<button type="button" class="numBtn" value=".">.</button>
+			</div>
+			<div class="operators">
+				<div class="artm">
+					<div class="add">
+						<button type="button" class="numBtn" value="+">+</button>
+						<button type="button" class="numBtn" value="-">-</button>
+					</div>
+					<div class="mul">
+						<button type="button" class="numBtn" value="x">x</button>
+						<button type="button" class="numBtn" value="/">/</button>
+					</div>
+				</div>
+				<div class="btn-group">
+					<button type="button" class="numBtn" value="=">=</button>
+					<button type="button" class="numBtn" value="AC">AC</button>
+				</div>
+			</div>
 		</div>
-		<div class="btn-group">
-			<button type="button" class="numBtn" value="1">1</button>
-			<button type="button" class="numBtn" value="2">2</button>
-			<button type="button" class="numBtn" value="3">3</button>
-		</div>
-		<div class="btn-group">
-			<button type="button" class="numBtn" value="+">+</button>
-			<button type="button" class="numBtn" value="-">-</button>
-			<button type="button" class="numBtn" value="x">x</button>
-			<button type="button" class="numBtn" value="/">/</button>
-		</div>
-		<div class="btn-group">
-			<button type="button" class="numBtn" value="0">0</button>
-			<button type="button" class="numBtn" value=".">.</button>
-			<button type="button" class="numBtn" value="=">=</button>
-			<button type="button" class="numBtn" value="AC">AC</button>
-		</div>
-		<p id="formula"></p>
-		<p id="result"></p>
 	</div>
 
 	<script src="script.js"></script>

@@ -1,0 +1,25 @@
+{
+  "name": "jscalculator",
+  "version": "1.0.0",
+  "description": "This calculator allows users to do basic arithmetics. It is built as a freeCodeCamp project using vanilla JS and SCSS.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edizcelik/JS-Calculator.git"
+  },
+  "author": "mr.edizcelik@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edizcelik/JS-Calculator/issues"
+  },
+  "homepage": "https://github.com/edizcelik/JS-Calculator#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-sass": "^3.1.0"
+  }
+}

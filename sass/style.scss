@@ -1,0 +1,74 @@
+$yellow: #FFCF11;
+$blue: #34495E;
+$red: #AF363A;
+$white: #F7F7F7;
+$black: #0F0C0D;
+$head: #A3A380;
+
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	background: $black;
+	background: url('../images/carbon_fibre.png')
+}
+
+button {
+	width: 70px; height: 70px;
+	background: $yellow;
+	cursor: pointer;
+	margin: 2px;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+button[value="AC"] {
+	background: $red;
+}
+
+.skeleton {
+	max-width: 540px;
+	//min-height: 90vh;
+	margin: 10vh auto 10vh;
+	background: $blue;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	h1 {
+		text-transform: uppercase;
+		color: $head;
+	}
+	.screen {
+		flex-basis: 500px;
+		min-height: 100px;
+		background: $white;
+		align-self: center;
+		margin: 2% auto 10%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+	}
+
+	.flex-grp {
+		flex-basis: 500px;
+		margin: auto;
+		margin-bottom: 5%;
+		display: flex;
+		justify-content: space-between;
+		.numbers {
+			flex: 1 1 50%;
+		}
+		.operators {
+			button {
+				width: 100px;
+			}
+		}
+	}
+
+}
