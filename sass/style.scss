@@ -1,7 +1,7 @@
 $yellow: #FFCF11;
 $blue: #34495E;
 $red: #AF363A;
-$white: #F7F7F7;
+$gray: #E5E5E5;
 $black: #0F0C0D;
 $head: #A3A380;
 
@@ -14,49 +14,91 @@ html {
 }
 
 body {
+	max-height: 100vh;
+	padding-top: 5vh;
 	font-family: 'Lato', sans-serif;
 	background: $black;
 	background: url('../images/carbon_fibre.png')
 }
 
 button {
-	width: 70px; height: 70px;
+	width: 60px; height: 60px;
 	background: $yellow;
 	cursor: pointer;
-	margin: 2px;
+	margin: 2px 3px 7px;
 	font-weight: bold;
 	font-size: 18px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 0px 5px 4px -2px black,
+				3px 2px 4px -2px black,
+				2.7px 3px 4px -2px black,
+				inset -1px -1.5px 15px darken($gray,30%);
+
+	&:active {
+		box-shadow: inset 0 0 15px -2px darken($gray,90%);
+	}
 }
 
 button[value="AC"] {
 	background: $red;
 }
+button[value="="] {
+	background: lighten($black,10%);
+	color: $gray;
+}
 
 .skeleton {
 	max-width: 540px;
 	//min-height: 90vh;
-	margin: 10vh auto 10vh;
+	margin: auto;
+	padding: 30px 0 70px;
 	background: $blue;
+	border-radius: 25px;
+	box-shadow: -1.7px 2.1px 7px 0.8px darken($gray, 40%),
+				inset 10px -2px 50px 10px lighten($blue, 15%),
+				inset 0px 4px 25px 10px darken($blue, 55%);
+
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	align-items: center;
+	align-content: flex-start;
 	h1 {
 		text-transform: uppercase;
 		color: $head;
+		text-align: center;
 	}
 	.screen {
-		flex-basis: 500px;
+		max-width: 90%;
+		overflow: hidden;
+		padding: 0 25px;
+		border-radius: 10px;
+		flex-basis: 400px;
 		min-height: 100px;
-		background: $white;
+		background: $gray;
+		box-shadow: inset -3px 3px 20px 5px darken($gray, 40%),
+					inset 20px -30px 25px 5px lighten($gray, 50%),
+					-3px 3px 7px -2px darken($gray,15%);
+
 		align-self: center;
 		margin: 2% auto 10%;
 		display: flex;
-		flex-direction: column;
-		justify-content: flex-end;
+		flex-direction: column-reverse;
+		p {
+			text-align: right;
+			//padding-right: 50px;
+		}
+		#result {
+			margin:20px 0 0;
+			font-size: 36px;
+			font-weight: bold;
+		}
 	}
 
 	.flex-grp {
-		flex-basis: 500px;
+		flex-basis: 400px;
 		margin: auto;
 		margin-bottom: 5%;
 		display: flex;
@@ -66,7 +108,7 @@ button[value="AC"] {
 		}
 		.operators {
 			button {
-				width: 100px;
+				width: 70px;
 			}
 		}
 	}

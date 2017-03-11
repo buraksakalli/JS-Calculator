@@ -5,26 +5,41 @@ html {
   box-sizing: inherit; }
 
 body {
+  max-height: 100vh;
+  padding-top: 5vh;
   font-family: 'Lato', sans-serif;
   background: #0F0C0D;
   background: url("../images/carbon_fibre.png"); }
 
 button {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   background: #FFCF11;
   cursor: pointer;
-  margin: 2px;
+  margin: 2px 3px 7px;
   font-weight: bold;
-  font-size: 18px; }
+  font-size: 18px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 5px 4px -2px black, 3px 2px 4px -2px black, 2.7px 3px 4px -2px black, inset -1px -1.5px 15px #999999; }
+  button:active {
+    box-shadow: inset 0 0 15px -2px black; }
 
 button[value="AC"] {
   background: #AF363A; }
 
+button[value="="] {
+  background: #2b2326;
+  color: #E5E5E5; }
+
 .skeleton {
   max-width: 540px;
-  margin: 10vh auto 10vh;
+  margin: auto;
+  padding: 30px 0 70px;
   background: #34495E;
+  border-radius: 25px;
+  box-shadow: -1.7px 2.1px 7px 0.8px #7f7f7f, inset 10px -2px 50px 10px #4f6f8f, inset 0px 4px 25px 10px black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -32,15 +47,26 @@ button[value="AC"] {
       flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: start;
+      align-content: flex-start; }
   .skeleton h1 {
     text-transform: uppercase;
-    color: #A3A380; }
+    color: #A3A380;
+    text-align: center; }
   .skeleton .screen {
-    -ms-flex-preferred-size: 500px;
-        flex-basis: 500px;
+    max-width: 90%;
+    overflow: hidden;
+    padding: 0 25px;
+    border-radius: 10px;
+    -ms-flex-preferred-size: 400px;
+        flex-basis: 400px;
     min-height: 100px;
-    background: #F7F7F7;
+    background: #E5E5E5;
+    box-shadow: inset -3px 3px 20px 5px #7f7f7f, inset 20px -30px 25px 5px white, -3px 3px 7px -2px #bfbfbf;
     -ms-flex-item-align: center;
         align-self: center;
     margin: 2% auto 10%;
@@ -48,15 +74,18 @@ button[value="AC"] {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end; }
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse; }
+    .skeleton .screen p {
+      text-align: right; }
+    .skeleton .screen #result {
+      margin: 20px 0 0;
+      font-size: 36px;
+      font-weight: bold; }
   .skeleton .flex-grp {
-    -ms-flex-preferred-size: 500px;
-        flex-basis: 500px;
+    -ms-flex-preferred-size: 400px;
+        flex-basis: 400px;
     margin: auto;
     margin-bottom: 5%;
     display: -webkit-box;
@@ -70,4 +99,4 @@ button[value="AC"] {
           -ms-flex: 1 1 50%;
               flex: 1 1 50%; }
     .skeleton .flex-grp .operators button {
-      width: 100px; }
+      width: 70px; }
